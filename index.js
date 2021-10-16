@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const helmet = require("helmet");
 const morgan = require("morgan");
+const userRoute = require("./routes/users");
+const authRoute = require("./routes/auth");
 
 
 dotenv.config();
@@ -22,6 +24,9 @@ app.use(morgan("cummon"));
 app.get("/", (req, res) => {
   res.send("Welcome to homepage");
 });
+
+app.use("/api/users", userRoute);
+app.use("/api/auth", userRoute);
 
 const port = 8800;
 app.listen(port, () =>{
