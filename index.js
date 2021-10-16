@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/users", userRoute);
-app.use("/api/auth", userRoute);
+app.use("/api/auth", authRoute);
 
 const port = 8800;
 app.listen(port, () =>{
