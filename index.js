@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 
-const port = 8800;
+const port = 8080;
 app.listen(port, () =>{
   console.log(`Server running on port: ${port}`);
 });
